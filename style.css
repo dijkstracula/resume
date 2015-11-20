@@ -1,0 +1,111 @@
+@font-face {
+    font-family: "Inconsolata";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Inconsolata"), url("http://themes.googleusercontent.com/static/fonts/inconsolata/v3/BjAYBlHtW3CJxDcjzrnZCIbN6UDyHWBl620a-IRfuBk.woff") format("woff");
+}
+
+body {
+    font-family: Inconsolata;
+    width: 960px;
+    margin: auto;
+}
+
+a {
+    color: #009900;
+}
+
+h1 {
+    font: 90%;
+    font-weight: bold;
+    margin: 15px 0 10px 0;
+}
+
+h2 {
+    font: 80%;
+    clear: both;
+    margin-top: 3rem;
+    border-bottom: 1px solid #666;
+    margin: 15px 0 10px 0;
+}
+
+h3 {
+    font: 65%;
+    margin: 0 0 2px 0;
+    padding: 0;
+}
+
+h4 {
+    font: 50%;
+    margin: 0 0 2px 0;
+}
+
+p {
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+body ul {
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+li {
+    font: 50%;
+    margin: 0 0 10px 5%;
+    padding: 0;
+}
+
+.job {
+    margin: 0 0 30px 0;
+    clear: both;
+    width: 100%;
+}
+
+.job_data {
+    float: left;
+    width: 85%;
+    margin: 0 0 5px 0;
+}
+
+.date {
+    clear: left;
+    float: left;
+    padding-top: 2px;
+    width: 15%;
+}
+
+.location {
+    clear: right;
+    float: right;
+    text-align: right;
+    width: 25%;
+}
+
+.description {
+    color: #666;
+    clear: both;
+    padding: 0;
+}
+
+.position {
+    font-style: italic;
+}
+
+.bio {
+    clear: both;
+}
+
+#bio_left {
+    font: 70%;
+    float: left;
+    width: 50%;
+}
+
+#bio_right {
+    font: 70%;
+    float: right;
+    width: 50%;
+    text-align: right;
+}

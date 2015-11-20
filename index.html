@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>Nathan Taylor</h1>
+        <div id="bio">
+            <p id="bio_left">
+            xxx xxth st, apt. x<br />
+            Oakland, CA 94xxx<br />
+            </p>
+            <p id="bio_right">
+            <a href="http://nathan.dijkstracula.net/">http://nathan.dijkstracula.net</a><br/>
+            <a href="mailto://nbtaylor+resume@gmail.com">nbtaylor+resume@gmail.com</a><br/>
+            </p>
+        </div>
+        
+        <h2>Work Experience</h2>
+        <div class="job">
+            <p class="date">10.2014 - present</p>
+            <div class="job_data">
+                <h3>Fastly</h3>
+                <p class="location">San Francisco, CA</p>
+                <p class="position">Software Engineer, Edge Engineering</p>
+                <p class="description">
+                Supported the <a href="https://www.fastly.com/blog/category/varnish">HTTP cache</a> that serves upwards of <a href="https://www.fastly.com/">two million requests per second</a> of Fastly customer traffic, as well as ancillary software such as Fastly's <a href="https://docs.fastly.com/guides/vcl/mixing-and-matching-fastly-vcl-with-custom-vcl">scripting language</a> compiler, TLS terminator, and distributed testing infrastructure.
+                </p>
+            </div>
+        </div>
+
+        <div class="job">
+            <p class="date">08.2012 - 10.2014</p>
+            <div class="job_data">
+                <h3>Twitter</h3>
+                <p class="location">San Francisco, CA</p>
+                <p class="position">Software Engineer</p>
+                <p class="description">
+                <a name="jvm"></a>
+                As a member of the <a href="https://blog.twitter.com/2013/new-tweets-per-second-record-and-how">Runtime Systems org</a>, I hacked on Twitter’s internal Java runtime, touching OpenJDK’s garbage collectors, the JIT compilers, as well as VM tooling and infrastructure. Also, I helped other teams debug performance issues related to garbage collection and application performance in their services.</p>
+                <p class="description">
+
+		<a name="spameng"></a>
+                On the <a href="https://blog.twitter.com/2012/shutting-down-spammers">Anti-Spam Engineering Team</a>, I revamped and replaced multiple legacy spam detection systems, and designed and implemented services for user spam reporting and actioning. Served as on call for the above.
+                </p>
+            </div>
+        </div>
+
+        
+        <h2>Projects and Code Samples</h2>
+        <div class="job">
+            <p class="date">04.2013</p>
+            <div class="job_data">
+                <a name="allocsampler"></a>
+                <h3>Allocsampler: Dynamic JVM allocation site sampler</h3>
+                <p class="description">Modified the interpreter and JIT compilers in Twitter's proprietary JVM stack to sample, instrument, and collate allocation sites of chosen objects in a low-overhead manner. Exposed as a Java-level API either for the running application to inspect itself, or for an external agent to consume.
+                </p>
+            </div>
+        </div>
+        <div class="job">
+            <p class="date">12.2010</p>
+            <div class="job_data">
+                <h3>btrfsraw: Tralfamadore disk image checkpointing module</h3>
+                <p class="position"><a href="https://gist.github.com/dijkstracula/5c1ff580d9c5390ca599">Source diff</a> | <a href="http://www.cs.ubc.ca/~tnathan/508-tnathan.pdf">Project report (PDF)</a></p>
+                <p class="description">Leveraged features of modern filesystems to provide fast COW-based checkpointing for the Tralfamadore execution analysis system.  Snapshots may be accessed through the QEMU monitor or transparently through the host filesystem.
+                </p>
+            </div>
+        </div>
+        <div class="job">
+            <p class="date">04.2010</p>
+            <div class="job_data">
+                <h3>Loopgrind: Event Loop Analyzer</h3>
+                <p class="position"><a href="https://github.com/dijkstracula/Loopgrind">Source</a> | <a href="https://github.com/dijkstracula/Loopgrind/blob/master/docs/538w-project-paper.pdf">Project report (PDF)</a> | <a href="https://github.com/dijkstracula/Loopgrind/blob/master/docs/presentation_slides.pdf">Slides (PDF)</a></p>
+                <p class="description">Valgrind plugin and an associated interactive visualization system to pinpoint basic blocks likely to correspond to event loop entry points. Intended to help reverse-engineering of software for which the original source is lost or unavailable.  Used to implement <a href="#iodine">Iodine</a>.
+                </p>
+            </div>
+        </div>
+
+        <div class="job">
+            <p class="date">12.2009</p>
+            <div class="job_data">
+                <h3>Asciimatic: Edge detection-based ASCII art generator</h3>
+                <p class="position"><a href="https://github.com/dijkstracula/Asciimatic">Source</a></p>
+                <p class="description">Uses low-level computer vision techniques to generate ASCII representations of raster images.</p>
+            </div>
+        </div>
+
+
+        <h2>Publications and Presentations</h2>
+        <div class="job">
+            <p class="date">12.2015</p>
+            <div class="job_data">
+                <h3>Papers We Love SF presentation: Two Approaches towards OS Scalability</h3>
+                <p class="location">San Francisco, CA</p>
+                <p class="position">December 2015 meetup presentation | <a href="http://www.meetup.com/papers-we-love-too/events/224178870/" target="_blank">Event Page</a></p>
+            </div>
+        </div>
+        <div class="job">
+            <p class="date">09.2015</p>
+            <div class="job_data">
+                <h3>Racing to Win: Race Conditions in Correct Protocols</h3>
+                <p class="location">National Harbor, MD</p>
+                <p class="position">Proceedings of Surge 2015 | <a href="https://github.com/dijkstracula/Surge2015">Materials</a></p>
+            </div>
+        </div>
+        <div class="job">
+            <p class="date">04.2015</p>
+            <div class="job_data">
+                <h3>Papers We Love SF paper presentation: The Multikernel</h3>
+                <p class="location">San Francisco, CA</p>
+                <p class="position">April 2015 meetup mini presentation | <a href="http://www.meetup.com/papers-we-love-too/events/212148242/" target="_blank">Event Page</a></p>
+            </div>
+        </div>
+        <div class="job">
+            <p class="date">06.2014</p>
+            <div class="job_data">
+                <h3>Your Heap And You: Garbage Collector Tuning for Twitter Services</h3>
+                <p class="location">San Francisco, CA</p>
+                <p class="position">Internal tech talk for backend service owners in the Trust And Safety org</p>
+            </div>
+        </div>
+        <div class="job">
+            <p class="date">05.2013</p>
+            <div class="job_data">
+                <h3>Cachekata: Memory Hierarchy Optimization via Dynamic Binary Translation</h3>
+                <p class="location">Vancouver, BC</p>
+                <p class="position">Msc. Thesis | <a href="https://circle.ubc.ca/handle/2429/44335" target="_blank">PDF</a></p>
+            </div>
+        </div>
+        <div class="job">
+            <p class="date">04.2013</p>
+            <div class="job_data">
+                <h3>Whose Cacheline is it Anyway? OS Support for Live Detection and Repair of False Sharing</h3>
+                <p class="location">Prague, CZE</p>
+                <p class="position">Proceedings of Eurosys '13 | <a href="http://eurosys2013.tudos.org/wp-content/uploads/2013/paper/Nanavati.pdf" target="_blank">PDF</a></p>
+            </div>
+        </div>
+        <div class="job">
+            <p class="date">03.2012</p>
+            <div class="job_data">
+                <h3>Debugging Through Time with the Tralfamadore Debugger</h3>
+                <p class="location">London, UK</p>
+                <p class="position">Proceedings of RESolVE '12 | <a href="http://www.dcs.gla.ac.uk/conferences/resolve12/papers/session4_paper1.pdf" target="_blank">PDF</a></p>
+            </div>
+        </div>
+        <div class="job">
+            <p class="date">08.2011</p>
+            <div class="job_data">
+                <a name="deanonymizer"></a>
+                <h3>Herbert West: Deanonymizer</h3>
+                <p class="location">San Francisco, CA</p>
+                <p class="position">Proceedings of HotSec'11 | <a href="https://www.usenix.org/legacy/event/hotsec11/tech/final_files/Nanavati.pdf" target="_blank">PDF</a></p>
+            </div>
+        </div>
+        <div class="job">
+            <p class="date">10.2010</p>
+            <div class="job_data">
+                <a name="iodine"></a>
+                <h3>Iodine: Interactive Program Partitioning</h3>
+                <p class="location">Vancouver, BC</p>
+                <p class="position">OSDI '10 Poster Session | <a href="http://www.cs.ubc.ca/~tnathan/iodineposter.pdf" target="_blank">PDF</a></p>
+            </div>
+        </div>
+
+        <h2>Education</h2>
+        <div class="job">
+            <p class="date">04.2013</p>
+            <div class="job_data">
+                <h3>The University of British Columbia</h3>
+                <p class="location">Vancouver, BC</p>
+                <p class="position">Msc, Computer Science | Supervisor: <a href="http://www.cs.ubc.ca/~andy/">Andy Warfield</a></p>
+                <p class="description">As a member of the <a href="http://www.cs.ubc.ca/labs/nss/" target="_blank">Network, Systems, and Security lab</a>, I've contributed to the Plastic memory remapping framework, the <a href="http://wiki.nss.cs.ubc.ca/Tralfamadore" target="_blank">Tralfamadore</a> execution analysis system, and the <a href="#deanonymizer">Revealthu</a> anonymous text classification system.
+                </p>
+                <p class="description">For UBC's <a href="https://sites.google.com/site/ubccpsc110/" target="_blank">Scheme-based introductory CS course</a>, I led course lab sessions and held scheduled office hours; additionally, graded assignments and exams as needed.  Lectured during instructor's absence on occasion.  For my work I was awarded a <a href="https://www.cs.ubc.ca/award/2011/05/graduate-ta-award">graduate TA award</a> by the University (a gold star!).
+                </p>
+                <p class="description">I also served as President of the <a href="https://www.cs.ubc.ca/~csgsa/">CS Graduate Students' Association</a> where I acted as the primary liason between the graduate student body and the department. I led the new student orientation organization, co-taught the departmental TA training sessions, organized various graduate <a href="https://www.cs.ubc.ca/~csgsa/events/regular-events/#tuesdaytea">social</a> <a href="http://www.cs.ubc.ca/~udls/">activities</a>, and represented the department on the <a href="https://www.grad.ubc.ca/faculty-staff/graduate-council">UBC Graduate Council</a>.
+            </div>
+        </div>
+        <div class="job">
+            <p class="date">04.2009</p>
+            <div class="job_data">
+                <h3>The University of Alberta</h3>
+                <p class="location">Edmonton, AB</p>
+                <p class="position">Bsc, Computing Science</p>
+                <p class="description">I served for two years on the executive of the <a href="http://ugweb.cs.ualberta.ca/~uacs/">Undergraduate Association of Computing Science</a>, which interfaced with groups and institutions outside the department and advocated for undergraduates' issues within.</p>
+                <p class="description">As a member of the U of A's <a href="http://sc08.supercomputing.org/?pg=SC08ClusterChallengeRules.html">Cluster Challenge Team</a>, I was responsible for configuring, performance-tuning, and benchmarking the GAMESS quantum chemistry package, as well as being one of the team experts in the application’s problem domain.  I also assisted with stereo visualization of molecular data, as well as general cluster system administration.</p>
+            </div>
+        </div>
+
+        <h2>Interests</h2>
+            <h3>Computer Science</h3>
+            <p class="description">Compiler Construction, Functional Programming, Machine Vision and Computer Graphics, Operating Systems, Parallel and High-Performance Computing, Computer Security</p>
+            <h3>Other</h3>
+            <p class="description">Coffee, Cycling, Live Music, Record Collecting, Trombone Playing</p>
+    </body>
+</html>
