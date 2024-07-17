@@ -48,17 +48,19 @@
                 <span>Contract Software Developer</span>
                 <div class="entry_details">
                     <p>
-                    Designed and implemented <i>Shapeshifter</i> with the <a
+                    Contributed to <i>Shapeshifter</i> with the <a
                         href="https://www.microsoft.com/en-us/research/theme/ai-for-systems/">
                         AI for Systems</a> lab, which leverages machine
-                    learning and dynamic analysis to optimize datastore index structure. 
-                    Contributed to high-level system design, core
-                    implementation, and performance analysis.
-                    Built an interactive <a
+                    learning and dynamic analysis to optimize datastore index
+                    structure.  Through careful design and profiling, reduced
+                    the critical-path policy engine's latency by nearly 40%.
+                    Built the interactive <a
                         href="https://github.com/dijkstracula/haibrid-viz">visualizer
-                        and frontend</a> to the system as part of a <a
+                        and frontend</a> as part of a <a
                         href="https://www.microsoft.com/en-us/research/blog/tag/techfest">TechFest</a>
-            demo for senior leadership.
+                    demo for senior leadership.  Mentored interns new to
+                    the project, one of whom reported that "this is the
+                    highest-quality research codebase I've ever seen".
                     </p>
                 </div>
             </div>
@@ -90,12 +92,11 @@
                 <span>Senior Software Engineer</span>
                 <div class="entry_details">
                     <p>Developed Fauna's core product, its <a href="https://fauna.com/enterprise">globally consistent, transactional database</a>.  Co-designed
-                    and implemented a distributed fault injection system to
-                    validate correctness under chaotic scenarios, such as
-                    network failures and database sharding changes.  Mentored
-                    engineers new to Scala, JVM concurrency, and the
-                    strongly-typed functional programming style.  Disseminated 
-                    technical knowledge via the <a
+                    and implemented a distributed fault injection testbed which
+                    caught database consistency bugs before they could hit
+                    production.  Mentored engineers new to Scala, JVM
+                    concurrency, and the strongly-typed functional programming
+                    style.  Disseminated technical knowledge via the <a
                         href="https://web.archive.org/web/20180504210202/https://blog.fauna.com/the-life-of-a-faunadb-query">official
                         company blog</a>.
                     </p>
@@ -111,7 +112,7 @@
                 </div>
                 <span>Senior Software Engineer</span>
                 <p >
-                Maintained Fastly's core product, an <a href="https://www.fastly.com/products/cdn">HTTP reverse proxy and cache</a> during which traffic increased sixfold to <a href="https://web.archive.org/web/20170304042200/http://www.fastly.com/">4.5 million RPS</a>.  Extended Fastly's <a href="https://docs.fastly.com/guides/vcl/mixing-and-matching-fastly-vcl-with-custom-vcl">edge-compute programming language</a>.  Led the design and implementation of a sandboxing dynamic analysis and system introspection runtime, atop which the compiler, API, and security teams have built custom tooling.  Represented Fastly externally by <a href="#dynamicanalysis">speaking</a> at <a href="#racing">conferences</a>.
+                Maintained Fastly's core product, an <a href="https://www.fastly.com/products/cdn">HTTP reverse proxy and cache</a> during which network throughput increased sixfold to <a href="https://web.archive.org/web/20170304042200/http://www.fastly.com/">4.5 million RPS</a>.  Extended Fastly's <a href="https://docs.fastly.com/guides/vcl/mixing-and-matching-fastly-vcl-with-custom-vcl">edge-compute programming language</a>.  Led the design and implementation of a sandboxing dynamic analysis and system introspection runtime, atop which the compiler, API, and security teams have built custom tooling.  Represented Fastly externally by <a href="#dynamicanalysis">speaking</a> at <a href="#racing">conferences</a>.
                 </p>
             </div>
         </div>
@@ -125,9 +126,9 @@
                 <span>Software Engineer II</span>
                 <p >
                 <a name="jvm"></a>
-                Extended Twitter's Ruby and Java runtimes as part of the <a href="https://blog.twitter.com/2013/new-tweets-per-second-record-and-how">Runtime Systems org</a>, improving garbage collection, JIT compilation, and VM tooling and infrastructure. Collaborated with service owners to debug GC and application-level performance issues in production systems.
+                Extended Twitter's Ruby and Java runtimes as part of the <a href="https://blog.twitter.com/2013/new-tweets-per-second-record-and-how">Runtime Systems org</a>, improving garbage collection, JIT compilation, and runtime tooling and infrastructure. Collaborated with service owners to debug GC and application-level performance issues in their production systems; in one case, careful GC and data structure tuning increased throughput by two orders of magnitude.
                 <a name="spameng"></a>
-                Revamped and replaced legacy spam and abuse systems as part of the <a href="https://blog.twitter.com/2012/shutting-down-spammers">Anti-Spam Engineering Team</a>, and designed and implemented services for user spam reporting and actioning.
+                Revamped legacy systems as part of the <a href="https://blog.twitter.com/2012/shutting-down-spammers">Anti-Spam Engineering Teams</a>, reducing end-to-end latency in key services by an order of magnitude, and designed and implemented new services for spam reporting and actioning.
                 </p>
             </div>
         </div>
