@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import url('https://fonts.googleapis.com/css?family=Open Sans');
 
 body {
-  font-family: Inconsolata;
-  width: 960px;
+  font-family: "Open Sans"; sans-serif;
+  width: 1000px;
   margin: auto;
 }
 
@@ -26,19 +26,24 @@ h2 {
 }
 
 h3 {
-  margin: 0 0 4px 0;
+  margin: 0 0 0 0;
+}
+
+h4 {
+  margin: 0 0 2px 0;
 }
 
 
 .entry {
   align-items: flex-start;
   display: flex; 
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .date {
+  text-align: right;
   flex: 0 0 80px;
-  margin: 0;
+  margin: 0 0.5em 0 0;
 }
 
 .location {
@@ -47,8 +52,8 @@ h3 {
 }
 
 .entry_body {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
   width: 980px;
 }
 .entry_header {
@@ -60,5 +65,7 @@ h3 {
 .entry_details {
   display: flex;
   flex-direction: row;
+  font-size: 0.9em;
   justify-content: space-between;
+  margin: 0 0 4px 0;
 }
