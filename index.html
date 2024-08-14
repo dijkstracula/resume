@@ -41,7 +41,7 @@
         </div>
 
         <div class="entry">
-            <p class="date">2020-2020</p>
+            <p class="date">2019-2020</p>
             <div class="entry_body">
                 <div class="entry_header">
                     <h3>Microsoft Research</h3>
@@ -54,14 +54,15 @@
                         href="https://www.microsoft.com/en-us/research/theme/ai-for-systems/">
                         AI for Systems</a> lab, which uses machine
                     learning and dynamic analysis to optimize datastore index
-                    structure.  Through careful design and profiling, reduced
-                    the critical-path policy engine's latency by nearly 40%.
-                    Built the interactive <a
+                    structure, beginning as an open source contributor and subsequently hired
+                    on in a contractor role.  Through careful design and
+                    profiling, reduced the critical-path policy engine's
+                    latency by nearly 40%. Built the interactive <a
                         href="https://github.com/dijkstracula/haibrid-viz">visualizer
                         and frontend</a> for MSR's <a
                         href="https://www.microsoft.com/en-us/research/blog/tag/techfest">TechFest</a>.
-                    Mentored PhD interns on the project, one of whom
-                    reported, "[Shapeshifter] is the highest-quality research codebase
+                    Mentored PhD interns on the project, one of whom reported,
+                    "[Shapeshifter] is the highest-quality research codebase
                     I've ever seen".  (I am inclined to agree!)
                     </p>
                 </div>
@@ -94,15 +95,18 @@
                 <span>Senior Software Engineer</span>
                 <div class="entry_details">
                     <p>Developed Fauna's core product, its <a
-                        href="https://fauna.com/enterprise">globally
-                        consistent, transactional database</a>.  Designed and
-                    implemented a distributed fault injection testbed to catch
-                    consistency volation bugs early. Mentored engineers new to
-                    Scala, JVM concurrency, and the strongly-typed functional
-                    programming style.  Disseminated technical knowledge via
-                    the <a
-                        href="https://web.archive.org/web/20180504210202/https://blog.fauna.com/the-life-of-a-faunadb-query">official
-                        company blog</a>.
+                        href="https://fauna.com/enterprise">strongly
+                        consistent, distributed document store</a>.  Designed
+                    and implemented a fault injection framework and associated
+                    fault definition <a
+                        href="https://martinfowler.com/dsl.html">DSL</a> to
+                    catch consistency volation bugs early and keep development
+                    velocity high. Mentored engineers new to Scala, JVM
+                    concurrency, and the strongly-typed functional programming
+                    style.  Disseminated knowledge on the <a
+                        href="https://web.archive.org/web/20180504210202/https://blog.fauna.com/the-life-of-a-faunadb-query">
+                        company blog
+                        </a>.
                     </p>
                 </div>
             </div>
@@ -117,7 +121,20 @@
                 <span>Senior Software Engineer</span>
                 <div class="entry_details">
                 <p>
-                Maintained Fastly's core product, an <a href="https://www.fastly.com/products/cdn">HTTP reverse proxy and cache</a> during which network throughput increased sixfold to <a href="https://web.archive.org/web/20170304042200/http://www.fastly.com/">4.5 million RPS</a>.  Extended Fastly's <a href="https://docs.fastly.com/guides/vcl/mixing-and-matching-fastly-vcl-with-custom-vcl">edge-compute programming language</a>.  Designed and led the implementation of a sandboxing dynamic analysis and system introspection runtime for the Fastly software stack, atop which the compiler, API, and security teams have built custom tooling.  Represented Fastly externally by <a href="#dynamicanalysis">speaking</a> at <a href="#racing">conferences</a>.
+                Maintained Fastly's core product, an <a
+                    href="https://www.fastly.com/products/cdn">HTTP reverse
+                    proxy and cache</a>, during which network throughput
+                increased sixfold to <a
+                    href="https://web.archive.org/web/20170304042200/http://www.fastly.com/">4.5
+                    million RPS</a>.  Extended Fastly's <a
+                    href="https://docs.fastly.com/guides/vcl/mixing-and-matching-fastly-vcl-with-custom-vcl">edge-compute
+                    programming language</a>.  Designed and led the
+                implementation of a sandboxing dynamic analysis and system
+                introspection runtime for the Fastly software stack, atop which
+                the compiler, API, and security teams have built custom
+                tooling.  Represented Fastly externally by <a
+                    href="#dynamicanalysis">speaking</a> at <a
+                    href="#racing">conferences</a>. 
                 </p>
                 </div>
             </div>
@@ -132,10 +149,23 @@
                 <span>Software Engineer II</span>
                 <div class="entry_details">
                 <p >
-                <a name="jvm"></a>
-                Extended Twitter's Ruby and Java runtimes on the <a href="https://blog.twitter.com/2013/new-tweets-per-second-record-and-how">Runtime Systems org</a>, improving garbage collection, JIT compilation, and runtime tooling and infrastructure.  Built an async, lock-free logging library to minimise tail latencies accrued during blocking GC logging calls.  Collaborated with external teams to diagnose service-level performance issues; in one case, careful analysis increased single-node throughput by two orders of magnitude.
+                <a name="jvm"></a> Extended Twitter's Ruby and Java runtimes on
+                the <a
+                    href="https://blog.twitter.com/2013/new-tweets-per-second-record-and-how">Runtime
+                    Systems team</a>, improving garbage collection, JIT
+                compilation, and runtime tooling and infrastructure.  Rebuilt
+                HotSpot's GC logging routines to be asynchronous and lock-free,
+                to minimise tail latencies exacerbated by blocking writes.
+                Collaborated with external teams to diagnose service-level
+                performance issues; in one case, careful analysis led to
+                increasing single-node throughput by two orders of magnitude.
                 <a name="spameng"></a>
-                Revamped legacy systems on the <a href="https://blog.twitter.com/2012/shutting-down-spammers">Anti-Spam Engineering Team</a>, reducing end-to-end latency by an order of magnitude in a key service, and built new services for spam reporting and actioning.
+                Revamped legacy systems on the <a
+                    href="https://blog.twitter.com/2012/shutting-down-spammers">Antispam and Trust and Safety
+                    Engineering Teams</a>, reducing end-to-end latency by an
+                order of magnitude in one key service, and helped build <a
+                    href="https://blog.twitter.com/engineering/en_us/a/2014/fighting-spam-with-botmaker">new
+                    services</a> for spam classification and actioning. 
                 </p>
                 </div>
             </div>
@@ -153,7 +183,6 @@
                     <h3>MacEwan University</h3>
                     <div class="location">Edmonton, AB, Canada</div>
                 </div>
-                <span>Sessional Instructor</span>
             </div>
 	</div>
         <div class="entry">
@@ -163,7 +192,6 @@
                     <h3>The University of Toronto</h3>
                     <div class="location">Toronto, ON, Canada (remote)</div>
                 </div>
-                <span>Sessional Instructor</span>
             </div>
         </div>
 
@@ -196,7 +224,7 @@
                 <span>Bsc, Computing Science</span>
                 <div class="entry_details">
                 <p>As a <a href="http://ugweb.cs.ualberta.ca/~uacs/">Undergraduate Association of Computing Science</a> executive, I interfaced with groups outside the department and advocated for students' issues within.
-                As a member of the U of A's <a href="https://edmonton.ctvnews.ca/students-prepare-for-supercomputer-competition-1.339006">Cluster Challenge Team</a>, I configured, benchmarked, and tuned the GAMESS quantum chemistry package, and was the physical chemistry domain expert for the team.  I also assisted with stereographic visualization of molecular data and general cluster system administration.</p>
+                As a member of the U of A's <a href="https://edmonton.ctvnews.ca/students-prepare-for-supercomputer-competition-1.339006">Cluster Challenge Team</a>, I configured, benchmarked, and tuned the GAMESS quantum chemistry package, and was the team's physical chemistry domain expert.  I also assisted with stereographic visualization of molecular data and general cluster system administration.</p>
                 </div>
             </div>
         </div>
@@ -223,7 +251,7 @@
                 <div class="entry_header">
                     <h3>Proving the Coding Interview</h3>
                     <div class="entry_details">
-                        <span>| <a href="https://dafny.org">Dafny</a> tutorial series
+                        <span>| <a href="https://dafny.org">Dafny</a> verified programming tutorial series
                               | <a href="https://www.cs.utexas.edu/~ntaylor/blog/proving/" target="_blank">Part 1</a>
                               | <a href="https://www.cs.utexas.edu/~ntaylor/blog/proving-2/" target="_blank">Part 2</a>
                               | <a href="https://www.cs.utexas.edu/~ntaylor/blog/proving-3/" target="_blank">Part 3</a>
@@ -252,7 +280,7 @@
                 <div class="entry_header">
                     <h3>Cache Ruins Everything Around Me!</h3>
                     <div class="entry_details">
-                        <span>| Guest lecture in Macewan University's <a href="https://twitter.com/cjmacdonell/status/935316762442088448">OS class</a> | <a href="https://docs.google.com/presentation/d/1SxHsJ-1Y4CSGu_4WH6SsWVBZyiHvllzyrSWBbyY7sx8/edit?usp=sharing" target="_blank">Slides</a>
+                        <span>| Guest lecture in Macewan University's <a href="https://twitter.com/cjmacdonell/status/935316762442088448">OS class</a> | <a href="https://docs.google.com/presentation/d/1JZOMsOtHk3doXjHmPGHEV90viRDq9A6LdksbCMAJqKQ/edit?usp=sharing" target="_blank">Slides</a>
                     </div>
                     </span>
                 </div>
@@ -338,7 +366,7 @@
             <p class="date">05.2013</p>
             <div class="entry_body">
                 <div class="entry_header">
-                    <h3>Cachekata: Memory Hierarchy Optimization via <br/> Dynamic Binary Translation</h3>
+                    <h3>Cachekata: Memory Hierarchy Optimization via Dynamic Binary Translation</h3>
                     <div class="entry_details">
                     <span>| Msc. Thesis | <a href="https://circle.ubc.ca/handle/2429/44335" target="_blank">PDF</a></span>
                     </div>
