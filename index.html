@@ -11,7 +11,6 @@
         <header>
             <div>
                 <div><a href="https://www.cs.utexas.edu/~ntaylor/">https://www.cs.utexas.edu/~ntaylor/</a></div>
-                <div><a href="http://nathan.dijkstracula.net/">http://nathan.dijkstracula.net</a></div>
             </div>
             <div>
                 <img src="contact.png"/>
@@ -28,43 +27,36 @@
                 </div>
                 <span>PhD Student and Graduate Research Assistant | Supervisor: <a href="https://jamesbornholt.com/">James Bornholt</a></span>
                 <div class="entry_details">
-                    <p>Pondered the intersection of formal methods and computer
-                    systems.  Organized the <a
-                        href="https://docs.google.com/document/d/1ZCiMWmxXyrL6ksXEUfIDsSLOZr6H3bV36BwdB6HrMcQ/edit?usp=sharing">PL-Systems</a>
-                    reading group and mentored undergrads attending the systems <a
-                        href="https://sites.cns.utexas.edu/utgd/directed-reading-program">directed
-                        reading program</a>.  Contributed to the <a
-                        href="#squirrelfs">SquirrelFS</a> Rust persistent memory
-                    filesystem.</p>
+                    <p>
+                    Applied lightweight formal methods, which trade off certain
+                    completeness guarantees for more practical applicability,
+                    to validating the correctness of concurrent and low-level
+                    systems software.
+
+                    Organized the PL-Systems reading group and mentored the
+                    advanced systems Undergraduate Directed Reading group.
+                    </p>
                 </div>
             </div>
         </div>
 
         <div class="entry">
-            <p class="date">2019-2020</p>
+            <p class="date">2020-2020</p>
             <div class="entry_body">
                 <div class="entry_header">
                     <h3>Microsoft Research</h3>
-                    <div class="location">New York, NY (remote)</div>
+                    <div class="location">Edmonton, AB, Canada (remote)</div>
                 </div>
-                <span>Contract Software Developer</span>
+                <span>Short-term Contract Software Developer</span>
                 <div class="entry_details">
                     <p>
-                    Contributed to <i>Shapeshifter</i> with the <a
-                        href="https://www.microsoft.com/en-us/research/theme/ai-for-systems/">
-                        AI for Systems</a> lab, which uses machine
-                    learning and dynamic analysis to optimize datastore index
-                    structure. Began as an open source contributor as an
-                    unemployment hobby, and was subsequently hired by MSR on a
-                    short-term contract. Through careful design and profiling,
-                    reduced the critical-path policy engine's latency by nearly
-                    40%. Built the interactive <a
-                        href="https://github.com/dijkstracula/haibrid-viz">visualizer
-                        and frontend</a> for MSR's <a
-                        href="https://www.microsoft.com/en-us/research/blog/tag/techfest">TechFest</a>.
-                    Mentored PhD interns on the project, one of whom reported,
-                    "this is the highest-quality research codebase I've ever
-                    seen".  (I am inclined to agree!)
+                    Contributed to <i>Shapeshifter</i> with the AI for Systems
+                    lab, which uses machine learning and dynamic analysis to
+                    optimize datastore index structure. Through careful design
+                    and profiling, reduced the critical-path policy engine's
+                    latency by nearly 40%. Built the interactive state
+                    visualizer and observability frontend for MSR's TechFest.
+                    Mentored incoming PhD interns to the project.
                     </p>
                 </div>
             </div>
@@ -79,9 +71,16 @@
                 <span>Systems Software Engineer</span>
                 <div class="entry_details">
                     <p>
-		    <a href="https://www.youtube.com/watch?v=YcjlhFVTY50">Brought the rainbow to you</a> by
-		    bridging the gap between hardware and software, influencing performance improvements,
-		    power efficiency, security, and the programming ease of hitherto-unreleased Apple products.
+                    Developed a high-performance GPU emulator modelling
+                    then-unreleased System-on-a-Chips designed for
+                    power-constrained phones, tablets, and wearables. Trading
+                    cycle-accuracy for usability, it reproduced functional
+                    behaviour with high fidelity and at interactive framerates,
+                    allowing teams to start programming against the hardware
+                    before tapeout.
+
+                    Revived the dormant company-wide OS research paper reading
+                    discussion group.
                     </p>
                 </div>
             </div>
@@ -95,20 +94,14 @@
                 </div>
                 <span>Senior Software Engineer</span>
                 <div class="entry_details">
-                    <p>Developed Fauna's core product, its <a
-                        href="https://fauna.com/enterprise">strongly
-                        consistent, distributed document store</a>.  Designed
+                    <p>Developed Fauna's core product, its strongly
+                        consistent, distributed document store.  Designed
                     and implemented a greybox fault injection framework and
-                    associated <a
-                        href="https://martinfowler.com/dsl.html">DSL</a> to
-                    state database correctness conditions, catch consistency
-                    volation bugs early, and keep development velocity high.
-                    Mentored engineers new to Scala, JVM concurrency, and the
-                    strongly-typed functional programming style.  Disseminated
-                    knowledge on the <a
-                        href="https://web.archive.org/web/20180504210202/https://blog.fauna.com/the-life-of-a-faunadb-query">
-                        company blog
-                        </a>.
+                    associated DSL to state database correctness conditions,
+                    catch consistency volation bugs early, and keep development
+                    velocity high. Mentored engineers new to Scala, JVM
+                    concurrency, and the strongly-typed functional programming
+                    style.  
                     </p>
                 </div>
             </div>
@@ -123,20 +116,13 @@
                 <span>Senior Software Engineer</span>
                 <div class="entry_details">
                 <p>
-                Maintained Fastly's core product, an <a
-                    href="https://www.fastly.com/products/cdn">HTTP reverse
-                    proxy and cache</a>, during which network throughput
-                increased sixfold to <a
-                    href="https://web.archive.org/web/20170304042200/http://www.fastly.com/">4.5
-                    million RPS</a>.  Extended Fastly's <a
-                    href="https://docs.fastly.com/guides/vcl/mixing-and-matching-fastly-vcl-with-custom-vcl">edge-compute
-                    programming language</a>.  Designed and led the
-                implementation of a sandboxing dynamic analysis and system
-                introspection runtime for the Fastly software stack, atop which
-                the compiler, API, and security teams have built custom
-                tooling.  Represented Fastly externally by <a
-                    href="#dynamicanalysis">speaking</a> at <a
-                    href="#racing">conferences</a>. 
+                Maintained Fastly's core product, an HTTP reverse proxy and
+                cache, during which network throughput increased sixfold to 4.5
+                million RPS.  Extended Fastly's edge-compute programming
+                language.  Designed and led the implementation of a sandboxing
+                dynamic analysis and system introspection runtime for the
+                Fastly software stack, atop which the compiler, API, and
+                security teams built custom tooling.  
                 </p>
                 </div>
             </div>
@@ -151,22 +137,17 @@
                 <span>Software Engineer II</span>
                 <div class="entry_details">
                 <p >
-                <a name="jvm"></a> Extended Twitter's Ruby and Java runtimes on
-                the <a
-                    href="https://blog.twitter.com/2013/new-tweets-per-second-record-and-how">Runtime
-                    Systems team</a>, improving garbage collection, JIT
-                compilation, and runtime tooling and infrastructure.  Rebuilt
-                HotSpot's GC logging subsystem to be asynchronous and lock-free,
-                to minimise tail latencies exacerbated by blocking writes.
-                Collaborated with external teams to diagnose service-level
-                performance issues; in one case, careful analysis uncovered
-                a regression throttling throughput by two orders of magnitude.
-                <a name="spameng"></a>
-                Revamped legacy systems on the <a
-                    href="https://blog.twitter.com/2012/shutting-down-spammers">Antispam and Trust and Safety
-                    Engineering Teams</a>, reducing end-to-end latency by ~10x in one key service, and built <a
-                    href="https://blog.twitter.com/engineering/en_us/a/2014/fighting-spam-with-botmaker">new
-                    services</a> for spam classification and actioning. 
+                Extended Twitter's Ruby and Java runtimes on the Runtime
+                Systems team, improving garbage collection, JIT compilation,
+                and runtime tooling and infrastructure.  Rebuilt HotSpot's GC
+                logging subsystem to be asynchronous and lock-free, to minimise
+                tail latencies exacerbated by blocking writes. Collaborated
+                with external teams to diagnose service-level performance
+                issues; in one case, careful analysis uncovered a regression
+                throttling throughput by two orders of magnitude. Revamped
+                legacy systems on the Antispam and Trust and Safety Engineering
+                Teams, reducing end-to-end latency by ~10x in one key service,
+                and built new services for spam classification and actioning.
                 </p>
                 </div>
             </div>
@@ -269,6 +250,19 @@
                     <h3>ELF off the Shelf</h3>
                     <div class="entry_details">
                         <span>| Guest lecture in MacEwan University's <a href="https://twitter.com/cjmacdonell/status/1216786311144587264">OS class</a> | <a href="https://docs.google.com/presentation/d/1dygppg_6jSmupCBlYYin8_xVKkGLZvJGSYEEvy7ZfLI/edit?usp=sharing" target="_blank">Slides</a>
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <p class="date">05.2018</p>
+            <div class="entry_body">
+                <div class="entry_header">
+                    <h3>The Life of a FaunaDB Query</h3>
+                    <div class="entry_details">
+                        <span>| Guest Post on the Fauna Corporate Blog | <a href="https://web.archive.org/web/20180504210202/https://blog.fauna.com/the-life-of-a-faunadb-query" target="_blank">Post</a>
                     </span>
                     </div>
                 </div>
