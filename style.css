@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Open Sans');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 body {
-  font-family: "Open Sans"; sans-serif;
+  font-family: "Raleway", sans-serif;
   width: 1000px;
   margin: auto;
 }
@@ -37,12 +37,11 @@ h4 {
 .entry {
   align-items: flex-start;
   display: flex; 
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .date {
-  text-align: right;
-  flex: 0 0 80px;
+  flex: 0 0 85px;
   margin: 0 0.5em 0 0;
 }
 
@@ -65,7 +64,7 @@ h4 {
 .entry_details {
   display: flex;
   flex-direction: row;
-  font-size: 0.9em;
+  //font-size: 0.9em;
   justify-content: space-between;
   margin: 0 0 4px 0;
 }
