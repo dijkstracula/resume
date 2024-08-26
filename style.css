@@ -8,7 +8,7 @@ body {
 
 h1 {
   font-weight: bold;
-  margin: 2px 0 2px 0;
+  margin: 6px 0 6px 0;
 }
 
 a {
@@ -41,7 +41,7 @@ h4 {
 }
 
 .date {
-  flex: 0 0 85px;
+  flex: 0 0 87px;
   margin: 0 0.5em 0 0;
 }
 
@@ -64,7 +64,7 @@ h4 {
 .entry_details {
   display: flex;
   flex-direction: row;
-  //font-size: 0.95em;
+  font-size: 0.97em;
   justify-content: space-between;
   margin: 0 0 4px 0;
 }
