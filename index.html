@@ -12,13 +12,35 @@
                 <div><a href="https://www.cs.utexas.edu/~ntaylor/">https://www.cs.utexas.edu/~ntaylor/</a></div>
             </div>
             <div>
-                <img src="contact.png"/>
+                <img class=scale src="contact.png"/>
             </div>
         </header>
 
         <h2>Experience</h2>
+
         <div class="entry">
-            <p class="date">2021-curr.</p>
+            <p class="date">2025-curr.</p>
+            <div class="entry_body">
+                <div class="entry_header">
+                    <h3>Semgrep</h3>
+                    Seattle, WA
+                </div>
+                <span>Staff Software Engineer, Program Analysis</span>
+                <div class="entry_details">
+                    <p>
+                    Led performance work on Semgrep's static analysis engine.
+                    Migrated the engine from fork-join parallelism to Multicore OCaml.
+                    <!--
+                    , reducing fleet-wide memory by X% use while ensuring data
+                    race-freedom and backwards-compatibility with the legacy
+                    parallelism mechanism. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry">
+            <p class="date">2021-2025</p>
             <div class="entry_body">
                 <div class="entry_header">
                     <h3>The University of Texas</h3>
@@ -31,10 +53,10 @@
                     completeness guarantees for practical applicability, to
                     validate the correctness of concurrent and low-level
                     systems software.  Applied such techniques in the contexts
-                    of verifying the crash consistency of a persistent memory
-                    filesystem, and in mechanizing the checking of a modern,
-                    optimised Paxos implementation against its hand-written
-                    formal specification and proof of correctness.
+                    of verifying crash consistency of a persistent memory
+                    filesystem, and in mechanizing validating a modern,
+                    optimised Paxos implementation against its human-written
+                    specification and correctness proof.
                     </p>
                 </div>
             </div>
@@ -45,21 +67,21 @@
             <div class="entry_body">
                 <div class="entry_header">
                     <h3>Independent Consultant</h3>
-                    <div class="location">Edmonton, AB, Canada (remote)</div>
                 </div>
                 <span>
-                    Took a break from the corporate world to teach
-                    undergraduate computer science, read research papers,
-                    and consult on interesting and impactful problems for a 
-                    variety of organizations:
+                    Took a break from corporate life to teach undergraduate
+                    computer science, read research papers, and consult on
+                    interesting and impactful problems for a variety of
+                    organizations:
                 </span>
                 <div class="entry_details">
                     <ul>
                         <li>
-                        At <i>Microsoft Research NYC</i>, co-developed
+                        At <i>Microsoft Research</i>, co-developed
                         ShapeshifterDB, which uses machine learning and dynamic
-                        analysis to optimise datastore index structures. Reduced
-                        critical-path policy engine's inference latency by 40%.
+                        analysis to optimise datastore index structures.
+                        Reduced critical-path inference latency by 40%.
+                        Mentored PhD interns.
                         </li>
                         <li>
                         At <i>RLCore Technologies</i>, built reliable and safe
@@ -68,11 +90,10 @@
                         record/replay debugging infrastructure for RL agents.
                         </li>
                         <li>
-                        At <i>The Department of Linguistics, University of Alberta</i>,
-                        collated First Nations language corpora into a
-                        unified open-access database and web frontend.
-                        Instructed non-technologists how to maintain and extend
-                        the software.
+                        At <i>The Department of Linguistics, University of
+                        Alberta</i>, collated First Nations language
+                        corpora into a unified open-access database and web
+                        frontend.
                         </li>
                     </ul>
                 </div>
@@ -89,14 +110,14 @@
                 <div class="entry_details">
                     <p>
                     Developed a high-performance GPU emulator modelling
-                    then-unreleased SoCs for power-constrained phones,
-                    tablets, and wearables. Trading cycle-accuracy for
-                    usability, it reproduced functional behaviour with high
-                    fidelity and at interactive framerates, allowing software
-                    teams to start programming before tapeout.
+                    then-unreleased SoCs for power-constrained devices. Trading
+                    cycle-accuracy for usability, it reproduced functional
+                    behaviour with high fidelity and at interactive framerates,
+                    allowing software teams to start programming before
+                    tapeout.
 
-                    Revived the dormant company-wide OS research paper reading
-                    discussion group.
+                    Revived the dormant company-wide systems paper reading
+                    group.
                     </p>
                 </div>
             </div>
@@ -112,11 +133,11 @@
                 <div class="entry_details">
                     <p>Developed Fauna's core product, its strongly consistent,
                     distributed document store.  Built a greybox fault
-                    injection framework and associated DSL to state database
-                    correctness conditions, catch consistency violation bugs
-                    early, and keep development velocity high. Mentored
-                    engineers new to Scala, JVM concurrency, and the
-                    strongly-typed FP style.  
+                    injection framework with associated DSL to state
+                    correctness invariants, catch consistency violation bugs
+                    early, and maintain development velocity. Mentored
+                    engineers new to Scala, JVM concurrency, and
+                    strongly-typed functional programming.
                     </p>
                 </div>
             </div>
@@ -132,10 +153,9 @@
                 <div class="entry_details">
                 <p>
                 Maintained Fastly's core product, an HTTP reverse proxy and
-                cache. Designed and led the implementation of a sandboxing
-                dynamic analysis and system introspection runtime for the
-                Fastly software stack, atop which the compiler, API, and
-                security teams built custom tooling.  
+                cache. Designed and built a sandboxing dynamic analysis runtime
+                for the Fastly software stack, atop which the compiler, API,
+                and security teams built custom tooling.  
                 </p>
                 </div>
             </div>
@@ -150,26 +170,21 @@
                 <span>Software Engineer II</span>
                 <div class="entry_details">
                 <p >
-                Extended Twitter's Ruby and Java runtimes on the Runtime
-                Systems team, improving garbage collection, JIT compilation,
-                and analysis tooling.  Rebuilt HotSpot's GC logging system to
-                minimise tail latencies exacerbated by blocking I/O.
-                Collaborated with external teams to diagnose service-level
-                performance issues; in one case, careful analysis uncovered a
-                regression throttling throughput by two orders of magnitude.
-                Revamped legacy systems on the Antispam and Trust and Safety
-                Engineering teams, and built new services for spam
-                classification and actioning.
+                Extended Twitter's Ruby and Java runtimes, improving garbage
+                collection, JIT compilation, and analysis tooling.  Migrated
+                HotSpot's GC loggers to nonblocking IO, to minimise tail
+                latencies. Collaborated with external teams to diagnose
+                performance issues with their services. Revamped legacy systems
+                and implemented new services for spam classification and
+                actioning. 
                 </p>
                 </div>
             </div>
         </div>
 
-        <div style="break-after:page"></div>
-
         <h2>Teaching</h2>
-        <p> For details about my teaching philosophy, please see <a
-            href="https://www.cs.utexas.edu/~ntaylor/teaching/">my
+        <p> For details about my teaching experience and philosophy, please see
+        <a href="https://www.cs.utexas.edu/~ntaylor/teaching/">my
             homepage</a>. 
         </p> 
         <div class="entry">
@@ -190,6 +205,8 @@
                 </div>
             </div>
         </div>
+
+        <div style="break-after:page"></div>
 
 
         <h2>Education</h2>
@@ -224,7 +241,11 @@
                 </span>
                 <div class="entry_details">
                 <p>
-                As President of the CS Graduate Students' Association, liased with students and UBC, led TA training sessions, organised social activities such as Tuesday Tea and the Undistingushed Lecture Series, and served on the UBC Grad Council.  Ran the systems and security reading seminars.
+                As President of the CS Graduate Students' Association, liased
+                with students and UBC, led TA training sessions, organised
+                social activities such as Tuesday Tea and the Undistingushed
+                Lecture Series, and served on the UBC Grad Council.  Ran the
+                systems and security reading seminars.
 
                 Received a TA award for my work supporting CPSC 110.
                 </p>
