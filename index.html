@@ -6,12 +6,10 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <h1>Nathan Taylor</h1>
         <header>
+        <h1>Nathan Taylor</h1>
             <div>
-                <div><a href="https://www.cs.utexas.edu/~ntaylor/">https://www.cs.utexas.edu/~ntaylor/</a></div>
-            </div>
-            <div>
+                <div><a href="https://ntaylor.ca">https://ntaylor.ca</a></div>
                 <img class=scale src="contact.png"/>
             </div>
         </header>
@@ -25,15 +23,16 @@
                     <h3>Semgrep</h3>
                     Seattle, WA
                 </div>
-                <span>Staff Software Engineer, Program Analysis</span>
+                <span>Staff Software Engineer</span>
                 <div class="entry_details">
                     <p>
-                    Led performance work on Semgrep's static analysis engine.
-                    Migrated the engine from fork-join parallelism to Multicore OCaml.
-                    <!--
-                    , reducing fleet-wide memory by X% use while ensuring data
-                    race-freedom and backwards-compatibility with the legacy
-                    parallelism mechanism. -->
+                    Tech lead for performance work on Semgrep's static analysis
+                    engine. 
+                    Led the migration from process-based parallelism to
+                    Multicore OCaml.
+                    Maintained our fork of the OCaml compiler and runtime,
+                    comprised of backported upstream fixes and custom changes.
+                    In aggregate, our work improved p95 scan performance by over 3x.
                     </p>
                 </div>
             </div>
@@ -49,14 +48,14 @@
                 <span>Graduate Research Assistant, Department of Computer Science</span>
                 <div class="entry_details">
                     <p>
-                    Researched <i>lightweight</i> formal methods, which trade
-                    completeness guarantees for practical applicability, to
-                    validate the correctness of concurrent and low-level
-                    systems software.  Applied such techniques in the contexts
-                    of verifying crash consistency of a persistent memory
-                    filesystem, and in mechanizing validating a modern,
+                    Researched lightweight formal methods, which trade
+                    completeness guarantees for applicability, to
+                    validate the correctness of
+                    systems software.
+                    Verified crash consistency of a persistent memory
+                    filesystem, and mechanised the validation of a modern,
                     optimised Paxos implementation against its human-written
-                    specification and correctness proof.
+                    correctness proof.
                     </p>
                 </div>
             </div>
@@ -70,30 +69,28 @@
                 </div>
                 <span>
                     Took a break from corporate life to teach undergraduate
-                    computer science, read research papers, and consult on
-                    interesting and impactful problems for a variety of
-                    organizations:
+                    CS, read research papers, and consult on
+                    interesting problems:
                 </span>
                 <div class="entry_details">
                     <ul>
                         <li>
-                        At <i>Microsoft Research</i>, co-developed
-                        ShapeshifterDB, which uses machine learning and dynamic
-                        analysis to optimise datastore index structures.
-                        Reduced critical-path inference latency by 40%.
-                        Mentored PhD interns.
+                        At <i>Microsoft Research</i>, developed
+                        an experimental storage engine that combines
+                        machine learning and dynamic analysis to optimise
+                        index structures. Reduced critical-path
+                        inference latency by 40%. Mentored PhD interns.
                         </li>
                         <li>
                         At <i>RLCore Technologies</i>, built reliable and safe
                         systems for reinforcement learning-driven industrial
                         control systems.  Implemented property-based testing and
-                        record/replay debugging infrastructure for RL agents.
+                        record/replay debugging libraries for RL agents.
                         </li>
                         <li>
-                        At <i>The Department of Linguistics, University of
-                        Alberta</i>, collated First Nations language
-                        corpora into a unified open-access database and web
-                        frontend.
+                        At <i>University of Alberta Dept. of Linguistics</i>,
+                        digitized First Nations language corpora into a unified
+                        open-access webapp.
                         </li>
                     </ul>
                 </div>
@@ -110,10 +107,10 @@
                 <div class="entry_details">
                     <p>
                     Developed a high-performance GPU emulator modelling
-                    then-unreleased SoCs for power-constrained devices. Trading
+                    in-development SoCs for power-constrained devices. Trading
                     cycle-accuracy for usability, it reproduced functional
                     behaviour with high fidelity and at interactive framerates,
-                    allowing software teams to start programming before
+                    allowing developers to start programming before
                     tapeout.
 
                     Revived the dormant company-wide systems paper reading
@@ -131,10 +128,10 @@
                 </div>
                 <span>Senior Software Engineer</span>
                 <div class="entry_details">
-                    <p>Developed Fauna's core product, its strongly consistent,
+                    <p>Developed Fauna's strongly consistent,
                     distributed document store.  Built a greybox fault
                     injection framework with associated DSL to state
-                    correctness invariants, catch consistency violation bugs
+                    correctness invariants, catch safety violations
                     early, and maintain development velocity. Mentored
                     engineers new to Scala, JVM concurrency, and
                     strongly-typed functional programming.
@@ -152,10 +149,10 @@
                 <span>Senior Software Engineer</span>
                 <div class="entry_details">
                 <p>
-                Maintained Fastly's core product, an HTTP reverse proxy and
-                cache. Designed and built a sandboxing dynamic analysis runtime
-                for the Fastly software stack, atop which the compiler, API,
-                and security teams built custom tooling.  
+                Maintained Fastly's reverse HTTP proxy and cache. Designed and
+                built a sandboxing dynamic analysis runtime for the Fastly
+                software stack, atop which the compiler, API, and security
+                teams built custom analyzers.
                 </p>
                 </div>
             </div>
@@ -171,22 +168,16 @@
                 <div class="entry_details">
                 <p >
                 Extended Twitter's Ruby and Java runtimes, improving garbage
-                collection, JIT compilation, and analysis tooling.  Migrated
-                HotSpot's GC loggers to nonblocking IO, to minimise tail
-                latencies. Collaborated with external teams to diagnose
-                performance issues with their services. Revamped legacy systems
-                and implemented new services for spam classification and
-                actioning. 
+                collection, JIT compilation, and performance analysis tooling.
+                Collaborated with external teams to diagnose performance issues
+                with their services. Revamped legacy systems and implemented
+                new services for spam classification and actioning. 
                 </p>
                 </div>
             </div>
         </div>
 
         <h2>Teaching</h2>
-        <p> For details about my teaching experience and philosophy, please see
-        <a href="https://www.cs.utexas.edu/~ntaylor/teaching/">my
-            homepage</a>. 
-        </p> 
         <div class="entry">
             <p class="date">2020-2021</p>
             <div class="entry_body">
@@ -274,7 +265,12 @@
             </div>
         </div>
         <h2>Selected Publications and Presentations</h2>
-
+            <div>
+        I also maintain a 
+        <a href="https://ntaylor.ca/blog/">blog</a> about formal methods,
+        programming language theory, and low-level and concurrent systems.
+            </div>
+        <p/>
         <div class="entry">
             <p class="date">09.2024</p>
             <div class="entry_body">
@@ -298,22 +294,6 @@
                     <div class="entry_details">
                         <span>| OSDI '24 
                               | <a href="https://www.usenix.org/conference/osdi24/presentation/leblanc" target="_blank">PDF</a>  
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="entry">
-            <p class="date">04.2022</p>
-            <div class="entry_body">
-                <div class="entry_header">
-                    <h3>Proving the Coding Interview</h3>
-                    <div class="entry_details">
-                        <span>| <a href="https://dafny.org">Dafny</a> tutorial series
-                              | <a href="https://www.cs.utexas.edu/~ntaylor/blog/proving/" target="_blank">Part 1</a>
-                              | <a href="https://www.cs.utexas.edu/~ntaylor/blog/proving-2/" target="_blank">Part 2</a>
-                              | <a href="https://www.cs.utexas.edu/~ntaylor/blog/proving-3/" target="_blank">Part 3</a>
                         </span>
                     </div>
                 </div>
@@ -464,7 +444,7 @@
             <p class="date">04.2013</p>
             <div class="entry_body">
                 <div class="entry_header">
-                    <h3>Whose Cacheline is it Anyway: Operating System Support for <br/> Live Detection &amp; Repair of False Sharing</h3>
+                    <h3>Whose Cache Line is it Anyway: OS Support for Live Detection &amp; Repair of False Sharing</h3>
                     <div class="entry_details">
                         <span>| Eurosys '13 | <a href="https://www.cs.ubc.ca/~mihirn/papers/plastic-eurosys.pdf" target="_blank">PDF</a></span>
                     </div>
