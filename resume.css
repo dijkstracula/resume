@@ -1,134 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
-
-* {
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 body {
   font-family: "Raleway", sans-serif;
-  font-size: 11pt;
-  line-height: 1.5;
-  max-width: 900px;
-  margin: 2em auto;
-  padding: 0 1em;
-  color: #222;
+  width: 1000px;
+  margin: auto;
 }
 
 h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin: 0 0 0.1em 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 6px 0 6px 0;
 }
 
-h2 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  border-bottom: 1px solid #aaa;
-  margin-top: 1.4em;
-  margin-bottom: 0.5em;
-  padding-bottom: 0.2em;
+a {
+  color: #6666FF;
 }
 
-h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-/* Header block: name + contact side by side */
-header, body > h1:first-of-type {
+header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.5em;
 }
 
-.header-contact {
-  text-align: right;
-  font-size: 0.95rem;
+h2 {
+  border-bottom: 1px solid #aaa;
 }
 
-/* Suppress default h1 block display so the flex trick works */
-h1 + .header-contact {
-  margin-top: -2rem;
+h3 {
+  margin: 0 0 0 0;
 }
 
-a {
-  color: #5555ee;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-/* Experience / Education entries use bold date + pipe separator pattern */
-p {
-  margin: 0.3em 0 0.6em 0;
+h4 {
+  margin: 0 0 2px 0;
 }
 
 ul {
-  margin: 0.2em 0 0.8em 0;
-  padding-left: 1.4em;
+  padding: 0 0 0 16px;
+  margin: 0 0 16px 0;
 }
 
-li {
-  margin-bottom: 0.3em;
+.entry {
+  align-items: flex-start;
+  display: flex;
+  margin-bottom: 3px;
 }
 
-/* Horizontal rules between entries act as light dividers */
-hr {
-  border: none;
-  border-top: 1px dotted #ddd;
-  margin: 0.6em 0;
+.date {
+  flex: 0 0 82px;
+  margin: 0 0 0 0;
 }
 
-/* Publications table */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.92rem;
-  margin-top: 0.5em;
+.location {
+  display: flex;
+  justify-content: flex-end;
 }
 
-thead tr {
-  border-bottom: 1px solid #bbb;
+.entry_body {
+  display: flex;
+  flex-direction: column;
+  width: 980px;
 }
 
-th {
-  text-align: left;
-  font-weight: 600;
-  padding: 4px 8px 4px 0;
+.entry_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-td {
-  vertical-align: top;
-  padding: 4px 8px 4px 0;
+.entry_details {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.95em;
+  justify-content: space-between;
 }
 
-td:first-child {
-  white-space: nowrap;
-  color: #555;
-  min-width: 5.5em;
+/* Hide pandoc's auto-generated title block; we have our own <header> */
+#title-block-header {
+  display: none;
 }
 
-tr:nth-child(even) {
-  background: #f9f9f9;
-}
 
-/* Print / PDF adjustments */
 @media print {
   body {
+    width: 100%;
     margin: 0;
-    padding: 0;
-    max-width: 100%;
   }
 
   a {
     color: #333;
   }
-
-  h2 {
-    page-break-after: avoid;
-  }
 }
+
