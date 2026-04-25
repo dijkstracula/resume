@@ -23,6 +23,10 @@ header {
   align-items: center;
 }
 
+p {
+  margin: 7px 0 10px 0;
+}
+
 h2 {
   border-bottom: 1px solid #aaa;
 }
@@ -37,7 +41,7 @@ h4 {
 
 ul {
   padding: 0 0 0 16px;
-  margin: 0 0 16px 0;
+  margin: 0 0 10px 0;
 }
 
 .scale {
@@ -53,6 +57,7 @@ ul {
 .date {
   flex: 0 0 82px;
   margin: 0 0 0 0;
+  font-size: 0.90em;
 }
 
 .location {
@@ -74,6 +79,6 @@ ul {
 .entry_details {
   display: flex;
   flex-direction: row;
-  font-size: 0.95em;
+  font-size: 0.90em;
   justify-content: space-between;
 }
