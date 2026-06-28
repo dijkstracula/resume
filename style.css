@@ -25,10 +25,7 @@ body {
 
 a {
   color: var(--accent);
-  text-decoration: none;
 }
-
-a:hover { text-decoration: underline; }
 
 p { margin: 4px 0 6px; }
 
