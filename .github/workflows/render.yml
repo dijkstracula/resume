@@ -1,0 +1,44 @@
+name: Render resume
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - data.yaml
+      - render.py
+      - style.css
+
+  # Allow triggering manually from the Actions tab.
+  workflow_dispatch:
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to push the regenerated index.html
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Render index.html
+        run: python render.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          # Only commit when index.html actually changed.
+          if git diff --staged --quiet; then
+            echo "index.html unchanged — nothing to commit."
+          else
+            git commit -m "chore: regenerate index.html"
+            git push
+          fi

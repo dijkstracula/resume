@@ -1,0 +1,241 @@
+# ── Resume content ─────────────────────────────────────────────────────────────
+# This is the single source of truth for all resume content.
+# - render.py reads this to generate index.html
+# - resume.typ reads this (via Typst's built-in yaml()) to generate a PDF
+#
+# Inline markup supported in string fields:
+#   *word*          → italic
+#   [label](url)    → hyperlink
+
+basics:
+  name: Nathan Taylor
+  website: https://ntaylor.ca
+  # Uncomment and fill in to include your email address in the header:
+  # email: you@example.com
+
+# Set to true to insert a page break before the Publications section.
+# In HTML this becomes `break-before: page`; in PDF it becomes a hard pagebreak.
+publications_page_break: true
+
+# ── Experience ─────────────────────────────────────────────────────────────────
+experience:
+  - date: "2025–curr."
+    org: Semgrep
+    location: "Seattle, WA"
+    role: "Staff Software Engineer, Program Analysis"
+    body: >-
+      Performance lead for Semgrep's static analysis engine,
+      improving median and tail scan times by 3× and reducing the
+      MCP server's latency by over 4×. Led the migration to
+      Multicore OCaml, enabling fine-grain parallelism
+      improvements. Maintained Semgrep's forked OCaml compiler.
+
+  - date: "2021–2025"
+    org: The University of Texas
+    location: "Austin, TX"
+    role: "Graduate Research Assistant, Department of Computer Science"
+    body: >-
+      Researched systems applications of lightweight formal methods.
+      Verified crash consistency of a persistent memory filesystem.
+      Mechanised validating an optimised Paxos implementation against
+      its formal spec.
+
+  - date: "2019–2021"
+    org: Independent Consultant
+    preamble: >-
+      Took a break from corporate life to teach, read research papers,
+      and help out on interesting problems:
+    body:
+      - >-
+        At *Microsoft Research*, contributed to a research storage engine
+        that combined low-latency ML and dynamic analysis to optimise
+        index structure layout. Reduced critical-path latency by 40%.
+        Mentored PhD interns.
+      - >-
+        At *RLCore Technologies*, built reliable and safe systems for
+        reinforcement learning-driven industrial control systems.
+        Implemented property-based testing and record/replay debugging
+        frameworks for RL agents.
+      - >-
+        At *The University of Toronto* and *MacEwan University*, developed
+        and taught undergrad CS courses.
+
+  - date: "2018–2019"
+    org: Apple
+    location: "Cupertino, CA"
+    role: Systems Software Engineer
+    body: >-
+      Developed high-performance GPU simulators modeling in-development
+      SoCs, reproducing functional behaviour at interactive framerates,
+      allowing developers to start programming before tapeout.
+
+  - date: "2017–2018"
+    org: Fauna
+    location: "San Francisco, CA"
+    role: Senior Software Engineer
+    body: >-
+      Developed Fauna's strongly consistent, distributed database.
+      Built a greybox fault injection tester to verify safety properties
+      and maintain development velocity. Mentored engineers new to Scala
+      and JVM concurrency.
+
+  - date: "2014–2017"
+    org: Fastly
+    location: "San Francisco, CA"
+    role: Senior Software Engineer
+    body: >-
+      Maintained Fastly's reverse HTTP proxy and cache. Led development
+      of a sandboxing dynamic analysis runtime for the Fastly software
+      stack, atop which the compiler, API, and security teams built
+      custom analyzers.
+
+  - date: "2012–2014"
+    org: Twitter
+    location: "San Francisco, CA"
+    role: Software Engineer II
+    body: >-
+      Extended Twitter's Ruby and Java runtimes, improving the GC, JIT,
+      and perf analysis tooling. Collaborated with service owners to
+      diagnose performance issues. Maintained systems for antispam
+      classification and actioning.
+
+# ── Publications ───────────────────────────────────────────────────────────────
+publications_preamble: >-
+  I also maintain a [blog](https://ntaylor.ca/blog/) about formal methods,
+  programming languages, and low-level & concurrent systems.
+
+publications:
+  - date: "09.2024"
+    title: An Invitation to Liquid Types
+    venues:
+      - label: Papers We Love NYC
+        url: https://www.meetup.com/papers-we-love/events/302943607/
+      - label: Video
+        url: https://www.youtube.com/watch?v=C5PuBeiWaSA
+
+  - date: "07.2024"
+    title: "SquirrelFS: Using the Rust Compiler to Check Filesystem Crash Consistency"
+    venues:
+      - label: "OSDI '24"
+      - label: PDF
+        url: https://www.usenix.org/conference/osdi24/presentation/leblanc
+
+  - date: "05.2018"
+    title: The Life of a FaunaDB Query
+    venues:
+      - label: Guest post on the Fauna blog
+        url: https://web.archive.org/web/20180504210202/https://blog.fauna.com/the-life-of-a-faunadb-query
+
+  - date: "11.2016"
+    title: "Hands-on HTTP/2, a Fresh Start to The Web"
+    venues:
+      - label: QCon SF
+        url: https://qconsf.com/sf2016/workshop/http2-workshop
+
+  - date: "06.2016"
+    title: "Beyond Breakpoints: A Tour Of Dynamic Analysis"
+    venues:
+      - label: QCon NYC
+        url: https://www.infoq.com/presentations/dynamic-analysis-tools
+      - label: Materials
+        url: https://github.com/dijkstracula/QConNYC2016/
+
+  - date: "12.2015"
+    title: Two Approaches Towards OS Scalability
+    venues:
+      - label: Papers We Love SF
+        url: http://www.meetup.com/papers-we-love-too/events/224178870/
+      - label: Video
+        url: https://www.youtube.com/watch?v=kaig7CL4-KU
+
+  - date: "09.2015"
+    title: "Racing to Win: Correct Concurrency with Race Conditions"
+    venues:
+      - label: "Surge '15"
+        url: https://github.com/dijkstracula/Surge2015
+      - label: Video
+        url: https://www.youtube.com/watch?v=WaU_w7V_OqE
+
+  - date: "04.2015"
+    title: "Your Computer Is Already A Distributed System; Why Isn't Your OS?"
+    venues:
+      - label: Papers We Love SF
+        url: http://www.meetup.com/papers-we-love-too/events/212148242/
+      - label: Video
+        url: https://www.youtube.com/watch?v=A22wSN9WEpg&t=56s
+
+  - date: "06.2014"
+    title: "Your Heap And You: Garbage Collector Tuning for Twitter Services"
+    venues:
+      - label: Internal tech talk
+
+  - date: "05.2013"
+    title: "Cachekata: Memory Hierarchy Optimization via Dynamic Binary Translation"
+    venues:
+      - label: M.Sc. Thesis
+      - label: PDF
+        url: https://circle.ubc.ca/handle/2429/44335
+
+  - date: "04.2013"
+    title: "Whose Cache Line is it Anyway: OS Support for Detection & Repair of False Sharing"
+    venues:
+      - label: "Eurosys '13"
+      - label: PDF
+        url: https://www.cs.ubc.ca/~mihirn/papers/plastic-eurosys.pdf
+
+  - date: "03.2012"
+    title: Debugging Through Time with the Tralfamadore Debugger
+    venues:
+      - label: "RESolVE '12"
+      - label: PDF
+        url: http://www.dcs.gla.ac.uk/conferences/resolve12/papers/session4_paper1.pdf
+
+  - date: "08.2011"
+    title: "Herbert West: Deanonymizer"
+    venues:
+      - label: "HotSec '11"
+      - label: PDF
+        url: https://www.usenix.org/legacy/event/hotsec11/tech/final_files/Nanavati.pdf
+
+  - date: "10.2010"
+    title: "Iodine: Interactive Program Partitioning"
+    venues:
+      - label: "OSDI '10 Poster Session"
+
+# ── Education ──────────────────────────────────────────────────────────────────
+education:
+  - date: "2021–2024"
+    org: The University of Texas
+    location: "Austin, TX"
+    degree: "PhD, Computer Science (incomplete)"
+    supervisor:
+      name: James Bornholt
+      url: https://www.jamesbornholt.com
+    body: >-
+      Organised the Systems+PL and the undergraduate systems reading
+      groups. Applied Scientist intern in the Automated Reasoning &
+      Database Services groups at AWS, working on distributed system
+      model checking.
+
+  - date: "2009–2012"
+    org: The University of British Columbia
+    location: "Vancouver, BC, Canada"
+    degree: "M.Sc., Computer Science"
+    supervisor:
+      name: Andy Warfield
+      url: http://www.cs.ubc.ca/~andy/
+    body: >-
+      President of the CS Graduate Students' Association. Led department
+      TA training. Appointed to the UBC Graduate Council. Organized the
+      systems lab reading seminar. Service award recipient for my work
+      supporting CPSC 110.
+
+  - date: "2005–2009"
+    org: The University of Alberta
+    location: "Edmonton, AB, Canada"
+    degree: "B.Sc. Specialization, Computing Science"
+    body: >-
+      Undergraduate Association of CS board member. Chemistry domain
+      expert for the 2008 Cluster Challenge team. Summer internship at
+      Alberta Machine Intelligence Institute (AICML), working on ML for
+      adaptive user interfaces.

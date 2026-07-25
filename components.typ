@@ -18,9 +18,69 @@
 #let soft_text(content) = text(size: 9.5pt, fill: ink_soft, content)
 #let org_text(content)  = text(weight: "semibold", content)
 
+// ── inline markup ─────────────────────────────────────────────────────────────
+// Converts a plain string from YAML into Typst content, supporting:
+//   *word*          → italic
+//   [label](url)    → hyperlink
+#let render_markup(s) = {
+  let result = []
+  let chars = s.clusters()
+  let n = chars.len()
+  let buf = ""
+  let i = 0
+
+  while i < n {
+    let c = chars.at(i)
+
+    if c == "*" {
+      // Scan forward for the closing *.
+      let j = i + 1
+      while j < n and chars.at(j) != "*" { j += 1 }
+      if j < n {
+        result += [#buf]
+        buf = ""
+        result += [#emph(chars.slice(i + 1, j).join(""))]
+        i = j + 1
+      } else {
+        buf += c
+        i += 1
+      }
+
+    } else if c == "[" {
+      // Look ahead for the full [label](url) pattern.
+      let j = i + 1
+      while j < n and chars.at(j) != "]" { j += 1 }
+      if j < n and (j + 1) < n and chars.at(j + 1) == "(" {
+        let k = j + 2
+        while k < n and chars.at(k) != ")" { k += 1 }
+        if k < n {
+          result += [#buf]
+          buf = ""
+          let label = chars.slice(i + 1, j).join("")
+          let url   = chars.slice(j + 2, k).join("")
+          result += link(url)[#label]
+          i = k + 1
+        } else {
+          buf += c
+          i += 1
+        }
+      } else {
+        buf += c
+        i += 1
+      }
+
+    } else {
+      buf += c
+      i += 1
+    }
+  }
+
+  result += [#buf]
+  result
+}
+
 // ── section heading ───────────────────────────────────────────────────────────
-// Renders a bold section label with a full-width rule beneath it, mimicking
-// the <h2> style in the HTML source.
+// Renders a bold section label with a full-width rule beneath it.
 #let section_heading(title) = {
   v(10pt, weak: true)
   block(width: 100%, spacing: 0pt)[
@@ -32,15 +92,13 @@
 }
 
 // ── entry grid ────────────────────────────────────────────────────────────────
-// Lays out a single resume entry as a two-column grid:
-//   column 1 (55pt) – date string in monospace faint ink
-//   column 2 (1fr)  – arbitrary content block
+// Two-column grid: 55pt date column | 1fr content column.
 #let entry(date, body) = {
   block(
     spacing:   4pt,
     breakable: false,
     grid(
-      columns:      (55pt, 1fr),
+      columns:       (55pt, 1fr),
       column-gutter: 4pt,
       date_text(date),
       body,
@@ -49,7 +107,6 @@
 }
 
 // ── experience entry ──────────────────────────────────────────────────────────
-// Renders one experience block from data.typ's `experience` array.
 #let experience_entry(e) = {
   let hdr = {
     org_text(e.org)
@@ -71,7 +128,7 @@
           block(spacing: 2pt, text(size: 9.5pt, e.preamble))
         }
         block(spacing: 2pt,
-          list(..b.map(item => text(size: 9.5pt, item)))
+          list(..b.map(item => text(size: 9.5pt, render_markup(item))))
         )
       } else {
         block(spacing: 2pt, text(size: 9.5pt, b))
@@ -83,17 +140,15 @@
 }
 
 // ── publication entry ─────────────────────────────────────────────────────────
-// Renders a publication / talk entry.  Venue links are formatted as
-// "| label" segments, linked when a URL is provided.
+// venues: array of dicts with keys `label` (string) and optional `url` (string)
 #let publication_entry(p) = {
   let venue_span = {
     for v in p.venues {
-      let (label, url) = v
       [| ]
-      if url != none {
-        link(url)[#text(fill: accent, label)]
+      if "url" in v and v.url != none {
+        link(v.url)[#text(fill: accent, v.label)]
       } else {
-        text(label)
+        text(v.label)
       }
       [ ]
     }
@@ -102,7 +157,7 @@
   let body_content = block(
     spacing: 1pt,
     grid(
-      columns:      (1fr, auto),
+      columns:       (1fr, auto),
       column-gutter: 6pt,
       org_text(p.title),
       align(right, text(size: 8.5pt, fill: ink_soft, venue_span)),
@@ -113,6 +168,7 @@
 }
 
 // ── education entry ───────────────────────────────────────────────────────────
+// degree: plain string; supervisor: optional dict with `name` and `url`
 #let education_entry(e) = {
   let hdr = {
     org_text(e.org)
@@ -122,10 +178,25 @@
     }
   }
 
+  let degree_line = {
+    if "degree" in e and e.degree != none {
+      e.degree
+      if "supervisor" in e and e.supervisor != none {
+        let sup = e.supervisor
+        [ | Supervisor: ]
+        if "url" in sup and sup.url != none {
+          link(sup.url)[#text(fill: accent, sup.name)]
+        } else {
+          sup.name
+        }
+      }
+    }
+  }
+
   let body_content = {
     block(spacing: 1pt)[#grid(columns: (1fr, auto), hdr)]
     if "degree" in e and e.degree != none {
-      block(spacing: 1pt, soft_text(e.degree))
+      block(spacing: 1pt, soft_text(degree_line))
     }
     if "body" in e and e.body != none {
       block(spacing: 2pt, text(size: 9.5pt, e.body))

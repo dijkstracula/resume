@@ -1,8 +1,11 @@
-// ─── Resume entrypoint ────────────────────────────────────────────────────────
-// Build: typst compile --features html resume.typ resume.html
-// Output: resume.html
+// ─── Resume entrypoint (Typst → PDF) ─────────────────────────────────────────
+// Build:  typst compile resume.typ
+// Output: resume.pdf
+//
+// For HTML output run:  python render.py
+// (Both read from data.yaml as the single source of truth.)
 
-#import "data.typ": basics, experience, publications, publications-preamble, education
+#import "data.typ": basics, experience, publications_preamble, publications, education, publications_page_break
 #import "components.typ": accent, ink, ink_soft, section_heading, experience_entry, publication_entry, education_entry
 
 // ── page & global text settings ───────────────────────────────────────────────
@@ -23,16 +26,14 @@
 #grid(
   columns: (1fr, auto),
   align:   (left + horizon, right + horizon),
-  // Left: name
   text(size: 22pt, weight: "semibold", tracking: -0.4pt)[#basics.name],
-  // Right: contact block
   {
     set text(size: 9.5pt, fill: ink_soft)
     stack(
       dir:     ttb,
       spacing: 3pt,
       link(basics.website)[#text(fill: accent)[#basics.website]],
-      if basics.email != none { basics.email },
+      if "email" in basics and basics.email != none { basics.email },
     )
   },
 )
@@ -43,18 +44,16 @@ v(6pt)
 #section_heading("Experience")
 #for e in experience [#experience_entry(e)]
 
-// ── Explicit section break ────────────────────────────────────────────────────
-// In an HTML build this is a visual separator; in a PDF build (drop
-// --features html and change the output extension) it becomes a hard page
-// break so Publications always starts at the top of a new page.
-#pagebreak(weak: true)
+// ── Explicit page break ───────────────────────────────────────────────────────
+// Controlled by `publications_page_break` in data.yaml.  When true, forces
+// Publications to always start at the top of a new page so minor edits don't
+// shift pagination.
+#if publications_page_break { pagebreak() }
 
 // ── Selected Publications and Presentations ───────────────────────────────────
 #section_heading("Selected Publications and Presentations")
 #block(spacing: 4pt,
-  pad(left: 16pt,
-    text(size: 9.5pt, fill: ink_soft, publications-preamble)
-  )
+  pad(left: 16pt, text(size: 9.5pt, fill: ink_soft)[#publications_preamble])
 )
 #for p in publications [#publication_entry(p)]
 
