@@ -40,7 +40,7 @@ typst compile resume.typ   # writes resume.pdf
 The CI workflow also compiles `resume.pdf` and uploads it as an artifact on each
 run.
 
-The `page_break_before` key in `data.yaml` controls where the forced page
+The `publications_page_break` key in `data.yaml` controls where the forced page
 break lands, keeping pagination deterministic regardless of content edits.
 
 ## Editing content
