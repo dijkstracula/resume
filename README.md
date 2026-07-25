@@ -26,7 +26,8 @@ python render.py        # writes index.html
 ```
 
 CI runs this automatically on every push that touches `data.yaml`,
-`render.py`, or `style.css` (see [`.github/workflows/render.yml`](.github/workflows/render.yml)).
+`render.py`, `style.css`, or Typst source files, and also compiles a PDF
+artifact (see [`.github/workflows/render.yml`](.github/workflows/render.yml)).
 
 ### PDF (optional, requires Typst)
 
@@ -35,6 +36,9 @@ Install [Typst](https://typst.app) (v0.11+), then:
 ```sh
 typst compile resume.typ   # writes resume.pdf
 ```
+
+The CI workflow also compiles `resume.pdf` and uploads it as an artifact on each
+run.
 
 The `page_break_before` key in `data.yaml` controls where the forced page
 break lands, keeping pagination deterministic regardless of content edits.
