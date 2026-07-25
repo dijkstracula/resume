@@ -2,9 +2,8 @@
 // Build: typst compile --features html resume.typ resume.html
 // Output: resume.html
 
-#import "data.typ":       basics, experience, publications, publications-preamble, education
-#import "components.typ": accent, ink, ink_soft, section_heading,
-                          experience_entry, publication_entry, education_entry
+#import "data.typ": basics, experience, publications, publications-preamble, education
+#import "components.typ": accent, ink, ink_soft, section_heading, experience_entry, publication_entry, education_entry
 
 // ── page & global text settings ───────────────────────────────────────────────
 #set page(
