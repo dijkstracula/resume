@@ -28,7 +28,8 @@ experience:
       improving median and tail scan times by 3× and reducing the
       MCP server's latency by over 4×. Led the migration to
       Multicore OCaml, enabling fine-grain parallelism
-      improvements. Maintained Semgrep's forked OCaml compiler.
+      improvements. In the Office of the CTO, led fine-tuning
+      efforts for next-gen neurosymbolic program analysis products.
 
   - date: "2021–2025"
     org: The University of Texas
