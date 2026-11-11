@@ -24,12 +24,11 @@ experience:
     location: "Seattle, WA"
     role: "Staff Software Engineer, Program Analysis"
     body: >-
-      Performance lead for Semgrep's static analysis engine,
-      improving median and tail scan times by 3× and reducing the
-      MCP server's latency by over 4×. Led the migration to
-      Multicore OCaml, enabling fine-grain parallelism
-      improvements. In the Office of the CTO, led fine-tuning
-      efforts for next-gen neurosymbolic program analysis products.
+      Performance TL for Semgrep's static analysis engine.  Led the port to
+      Multicore OCaml, unlocking order-of-magnitude throughput improvements.
+      Optimized the engine for agentic scans, reducing latency by 3x.  In the
+      Office of the CTO, led post-training efforts for next-gen neurosymbolic
+      program analysis products.
 
   - date: "2021–2025"
     org: The University of Texas
@@ -48,18 +47,19 @@ experience:
       and help out on interesting problems:
     body:
       - >-
-        At *Microsoft Research*, contributed to a research storage engine
-        that combined low-latency ML and dynamic analysis to optimise
-        index structure layout. Reduced critical-path latency by 40%.
-        Mentored PhD interns.
+        At *Microsoft Research*, contributed to a storage system prototype that
+        combined low-latency ML and dynamic analysis to optimise index
+        structure layout. Reduced critical-path latency by 40%. Mentored PhD
+        interns.
       - >-
         At *RLCore Technologies*, built reliable and safe systems for
-        reinforcement learning-driven industrial control systems.
-        Implemented property-based testing and record/replay debugging
-        frameworks for RL agents.
+        reinforcement learning-driven industrial control.  Implemented
+        property-based testing and record/replay debugging frameworks for RL
+        agents.
       - >-
-        At *The University of Toronto* and *MacEwan University*, developed
-        and taught undergrad CS courses.
+        At *The University of Toronto* and *MacEwan University*, developed and
+        taught undergrad CS courses.  Nominated by students for Macewan's
+        Distinguished Teaching award.
 
   - date: "2018–2019"
     org: Apple
@@ -75,35 +75,32 @@ experience:
     location: "San Francisco, CA"
     role: Senior Software Engineer
     body: >-
-      Developed Fauna's strongly consistent, distributed database.
-      Built a greybox fault injection tester to verify safety properties
-      and maintain development velocity. Mentored engineers new to Scala
-      and JVM concurrency.
+      Developed Fauna's strongly consistent, distributed database.  Built a
+      greybox fault injector to verify safety properties while maintaining
+      development velocity. Mentored devs new to Scala and JVM concurrency.
 
   - date: "2014–2017"
     org: Fastly
     location: "San Francisco, CA"
     role: Senior Software Engineer
     body: >-
-      Maintained Fastly's reverse HTTP proxy and cache. Led development
-      of a sandboxing dynamic analysis runtime for the Fastly software
-      stack, atop which the compiler, API, and security teams built
-      custom analyzers.
+      Maintained Fastly's edge compute stack. Led development of a full-stack
+      dynamic analysis runtime, atop which the compiler, API, and security
+      teams built custom analyzers.
 
   - date: "2012–2014"
     org: Twitter
     location: "San Francisco, CA"
     role: Software Engineer II
     body: >-
-      Extended Twitter's Ruby and Java runtimes, improving the GC, JIT,
-      and perf analysis tooling. Collaborated with service owners to
-      diagnose performance issues. Maintained systems for antispam
-      classification and actioning.
+      Extended Twitter's Ruby and Java runtimes, improving GC, JIT, and perf
+      analysis tools. Collaborated with service owners to diagnose performance
+      issues. Maintained systems for antispam classification and actioning.
 
 # ── Publications ───────────────────────────────────────────────────────────────
 publications_preamble: >-
   I also maintain a [blog](https://ntaylor.ca/blog/) about formal methods,
-  programming languages, and low-level & concurrent systems.
+  functional programming, and low-level & concurrent systems.
 
 publications:
   - date: "09.2024"
