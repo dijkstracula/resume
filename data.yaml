@@ -26,9 +26,9 @@ experience:
     body: >-
       Performance TL for Semgrep's static analysis engine.  Led the port to
       Multicore OCaml, unlocking order-of-magnitude throughput improvements.
-      Optimized the engine for agentic scans, reducing latency by 3x.  In the
-      Office of the CTO, led post-training efforts for next-gen neurosymbolic
-      program analysis products.
+      Optimized agentic scan products, reducing latency by 3x.  In the Office
+      of the CTO, led post-training efforts for next-gen neurosymbolic program
+      analysis products.
 
   - date: "2021–2025"
     org: The University of Texas
